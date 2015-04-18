@@ -108,7 +108,7 @@ func (a TwitterApi) GetFollowersIdsAll(v url.Values) (result chan FollowersIdsPa
 			c, err := a.GetFollowersIds(v)
 
 			// throttledQuery() handles all rate-limiting errors
-			// if GetFollowersList() returns an error, it must be a different kind of error
+			// if GetFollowersIds() returns an error, it must be a different kind of error
 
 			result <- FollowersIdsPage{c.Ids, err}
 
